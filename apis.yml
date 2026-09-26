@@ -1,23 +1,60 @@
 aid: arthurpharmaceuticals
+
 name: Arthurpharmaceuticals
-description: 'Arthurpharmaceuticals is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Arthurpharmaceuticals is a stub entry created from the API Evangelist harvest backlog (source: secondary-market). Exhaustive web searches, including attempts to resolve domains such as arthurpharma.com and related listings, did not reveal a public website, documentation, or API endpoints. Consequently, detailed information about the company’s services, products, or API offerings is currently unavailable.'
+
 url: https://raw.githubusercontent.com/api-evangelist/arthurpharmaceuticals/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Pharma
+- Healthcare
+- Biotechnology
+- Europe
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
-- type: Website
-  url: https://equityzen.com/company/arthurpharmaceuticals
+
+  - type: Hosts
+    url: hosts/arthurpharmaceuticals-hosts.yml
+  - type: Vendors
+    url: vendors/arthurpharmaceuticals-vendors.yml
+  - type: DomainSecurity
+    url: security/arthurpharmaceuticals-domain-security.yml
+  - type: Website
+    url: https://equityzen.com/company/arthurpharmaceuticals
+
+apis: []
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: No developer program or API documentation was discovered for Arthurpharmaceuticals.
+  evidence:
+  - url: https://equityzen.com/company/arthurpharmaceuticals
+    status: 403
+  checked: '2026-09-26'
+x-enrichment:
+  date: '2026-09-26'
+  status: minimal
+  artifacts_added: 2
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
